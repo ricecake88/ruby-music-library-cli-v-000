@@ -9,6 +9,7 @@ class MusicLibraryController
   end
   
   def list_songs
+    binding.pry
    reorderedSongs = []
     @mp3s.each do |mp3|
       songInfo = mp3.split(" - ")
