@@ -12,6 +12,7 @@ class MusicLibraryController
     reorderedSongs = Song.all.sort {|a,b| a.name <=> b.name}
     binding.pry
     reorderedSongs.each_with_index(1) do |song,index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+  end
     '''
    reorderedSongs = []
     @mp3s.each do |mp3|
