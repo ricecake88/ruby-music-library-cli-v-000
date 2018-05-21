@@ -61,7 +61,7 @@ class MusicLibraryController
     reorderedSongs = Song.all.sort {|a,b| a.name <=> b.name}
     puts songNumIndex
     if songNumIndex-1 < reorderedSongs.length && songNumIndex >= 1 && songNumIndex <= 100
-      puts "Playing #{reorderedSongs[songInt-1][0]} by #{reorderedSongs[songInt-1][1]}"
+      puts "Playing #{reorderedSongs[songNumIndex-1][0]} by #{reorderedSongs[songNumIndex-1][1]}"
     end
   end
 
