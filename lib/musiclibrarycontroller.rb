@@ -13,19 +13,6 @@ class MusicLibraryController
     reorderedSongs.each_with_index do |song,index|
       puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
-    '''
-   reorderedSongs = []
-    @mp3s.each do |mp3|
-      songInfo = mp3.split(" - ")
-      artist_name = songInfo[0]
-      song_name = songInfo[1]
-      genre_name = songInfo[2].gsub!(/.mp3/,"")
-      reorderedSongs << [song_name, artist_name, genre_name]
-    end
-    reorderedSongs.sort.each_with_index do |song, index|
-      puts "#{index+1}. #{song[1]} - #{song[0]} - #{song[2]}"
-    end
-    '''
   end
   
   def list_artists
