@@ -10,6 +10,7 @@ class MusicLibraryController
   
   def list_songs
     binding.pry
+    Song.all.sort {|a,b| a.name < b.name}
    reorderedSongs = []
     @mp3s.each do |mp3|
       songInfo = mp3.split(" - ")
