@@ -59,7 +59,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     songNumIndex = gets.strip.to_i
     reorderedSongs = Song.all.sort {|a,b| a.name <=> b.name}
-    
+    puts songNumIndex
     if songInt-1 < reorderedSongs.length && songInt >= 1 && songInt <= 100
       puts "Playing #{reorderedSongs[songInt-1][0]} by #{reorderedSongs[songInt-1][1]}"
     end
