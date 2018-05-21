@@ -57,19 +57,9 @@ class MusicLibraryController
   
   def play_song
     puts "Which song number would you like to play?"
-    songNumIndex = gets.strip
-    songInt = songNumIndex.to_i
-    #sortedSongs = Song.all.sort_by! {|song| song.name}
-    #sortedSongs.uniq.each do |song|
-    reorderedSongs = []
-    @mp3s.each do |mp3|
-      songInfo = mp3.split(" - ")
-      artist_name = songInfo[0]
-      song_name = songInfo[1]
-      genre_name = songInfo[2].gsub!(/.mp3/,"")
-      reorderedSongs << [song_name, artist_name, genre_name]
-    end
-    reorderedSongs.sort!
+    songNumIndex = gets.strip.to_i
+    reorderedSongs = Song.all.sort {|a,b| a.name <=> b.name}
+    
     if songInt-1 < reorderedSongs.length && songInt >= 1 && songInt <= 100
       puts "Playing #{reorderedSongs[songInt-1][0]} by #{reorderedSongs[songInt-1][1]}"
     end
