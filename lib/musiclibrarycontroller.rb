@@ -60,6 +60,7 @@ class MusicLibraryController
     songNumIndex = gets.strip.to_i
     reorderedSongs = Song.all.sort {|a,b| a.name <=> b.name}
     if songNumIndex-1 < reorderedSongs.length && songNumIndex >= 1 && songNumIndex <= 100
+      binding.pry
       puts "Playing #{reorderedSongs[songNumIndex-1][0]} by #{reorderedSongs[songNumIndex-1][1]}"
     end
   end
