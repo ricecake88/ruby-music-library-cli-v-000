@@ -10,8 +10,9 @@ class MusicLibraryController
   
   def list_songs
     reorderedSongs = Song.all.sort {|a,b| a.name <=> b.name}
-    binding.pry
-    reorderedSongs.each_with_index(1) do |song,index| puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    reorderedSongs.each_with_index(1) do |song,index|
+      binding.pry
+      puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   end
     '''
    reorderedSongs = []
