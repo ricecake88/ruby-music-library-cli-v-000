@@ -105,7 +105,7 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
       userInput = gets.strip
-      case userInput:
+      case userInput
       when "list songs"
         list_songs
       when "list artists"
