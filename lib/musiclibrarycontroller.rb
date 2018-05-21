@@ -25,15 +25,6 @@ class MusicLibraryController
       puts "#{index+1}. #{song[1]} - #{song[0]} - #{song[2]}"
     end
     '''
-    #binding.pry
-    Song.all.sort_by! {|song|song.name}
-    Song.all.uniq
-    #binding.pry    
-    Song.all.each_with_index do |song, index| 
-      binding.pry
-      puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-    end
-    '''
   end
   
   def list_artists
